@@ -1,7 +1,15 @@
 class MyList {
-  List<Map<String, String>> tasks = [];
+  List<Map<dynamic, String>> tasks = [];
 
-  AddTask(task) {
-    tasks.add(task.title[task.description]);
+  add_task(task) {
+    tasks.add({"Title": task.title, "Description": task.description});
+  }
+
+  show_tasks() {
+    tasks.forEach((element) {
+      String? title = element['Title'];
+      String? description = element['Description'];
+      print("\n$title\n- $description");
+    });
   }
 }
