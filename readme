@@ -1,0 +1,7 @@
+Requisitos:
+
+O aplicativo deve permitir adicionar uma tarefa à lista.
+Cada tarefa deve ter um título e uma descrição.
+As tarefas devem ser exibidas em uma lista.
+O usuário deve poder marcar uma tarefa como concluída.
+O usuário deve poder remover uma tarefa da lista.
