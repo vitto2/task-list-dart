@@ -14,12 +14,10 @@ main() {
 
   vitorLista.add_task(vitorTask1);
   vitorLista.add_task(vitorTask2);
-
   vitorLista.show_tasks();
-
-  vitorLista.remove_task(1);
-
-
+  vitorLista.task_status_in_progress(0);
+  vitorLista.show_tasks();
+  vitorLista.task_status_done(1);
   vitorLista.show_tasks();
 
 }

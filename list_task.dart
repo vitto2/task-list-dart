@@ -5,7 +5,7 @@ class MyList {
   add_task(task) {
     index++;
     tasks.add(
-        {"index": index, "Title": task.title, "Description": task.description});
+        {"index": index, "Title": task.title, "Description": task.description, "Status": task.status});
   }
 
   show_tasks() {
@@ -14,7 +14,9 @@ class MyList {
       String? title = element['Title'];
       String? description = element['Description'];
       int? index = element["index"];
-      print("\n$index - $title:\n $description ");
+      String? status = element['Status'];
+
+      print("\n$index - $title:\n$description\nStatus:$status");
     });
     print("_____________________________________");
   }
@@ -29,5 +31,20 @@ class MyList {
     } else {
       print("A lista de tasks está vazia.");
     }
+  }
+
+  task_status_in_progress(int index) { 
+    Map task = tasks[index]; 
+    task["Status"]= "Em andamento"; 
+  }
+
+  task_status_done(int index) { 
+     Map task = tasks[index]; 
+    task["Status"]= "Concluído"; 
+  }
+
+  task_status_pending(int index) { 
+    Map task = tasks[index]; 
+    task["Status"]= "Pendente"; 
   }
 }
